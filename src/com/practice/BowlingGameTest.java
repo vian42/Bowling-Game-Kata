@@ -27,13 +27,27 @@ public class BowlingGameTest {
 
     @Test
     public void no_bonus_point_when_no_spare_and_no_strike() {
-        Integer pinsFirstTrie = 5;
-        Integer pinsSecondTrie = 3;
+        Integer pinsFirstTry = 5;
+        Integer pinsSecondTry = 3;
         Integer initScore = game.getScore();
-        game.roll(pinsFirstTrie);
-        game.roll(pinsSecondTrie);
+        game.roll(pinsFirstTry);
+        game.roll(pinsSecondTry);
         Integer endScore = game.getScore();
-        Integer expectedScore = initScore + pinsFirstTrie + pinsSecondTrie;
+        Integer expectedScore = initScore + pinsFirstTry + pinsSecondTry;
         assertEquals(expectedScore, endScore);
+    }
+
+    @Test
+    public void name() {
+        Integer pinsFirstTryFirstFrame = 7;
+        Integer pinsSecondTryFirstFrame = 3;
+        Integer pinsFirstTrySecondFrame = 4;
+        Integer initScore = game.getScore();
+        game.roll(pinsFirstTryFirstFrame);
+        game.roll(pinsSecondTryFirstFrame);
+        game.roll(pinsFirstTrySecondFrame);
+        Integer endScore = game.getScore();
+        Integer expectedScore = initScore + pinsFirstTryFirstFrame + pinsSecondTryFirstFrame + 2 * pinsFirstTrySecondFrame;
+        assertEquals(expectedScore,endScore);
     }
 }
