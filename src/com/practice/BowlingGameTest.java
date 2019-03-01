@@ -7,16 +7,16 @@ import static org.junit.Assert.*;
 
 public class BowlingGameTest {
 
-    private BowlingGame object;
+    private BowlingGame game;
 
     @Before
     public void initGame() {
-        object = new BowlingGame();
+        game = new BowlingGame();
     }
 
     @Test
-    public void test() {
-        assertNotNull("BowlingGame ne peut être null", object);
+    public void should_have_access_to_a_game() {
+        assertNotNull("BowlingGame ne peut être null", game);
     }
 
 }
