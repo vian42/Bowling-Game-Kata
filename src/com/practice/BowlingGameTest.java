@@ -24,4 +24,11 @@ public class BowlingGameTest {
         Integer score = game.getScore();
         assertEquals(Integer.valueOf(0), score);
     }
+
+    @Test
+    public void name() {
+        game.roll(0);
+        Integer score = game.getScore();
+        assertEquals(Integer.valueOf(0), score);
+    }
 }
