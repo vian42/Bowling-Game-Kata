@@ -26,12 +26,14 @@ public class BowlingGameTest {
     }
 
     @Test
-    public void score_evolves_with_no_bonus() {
-        Integer pins = 5;
+    public void no_bonus_point_when_no_spare_and_no_strike() {
+        Integer pinsFirstTrie = 5;
+        Integer pinsSecondTrie = 3;
         Integer initScore = game.getScore();
-        game.roll(pins);
+        game.roll(pinsFirstTrie);
+        game.roll(pinsSecondTrie);
         Integer endScore = game.getScore();
-        Integer expectedScore = initScore + pins;
+        Integer expectedScore = initScore + pinsFirstTrie + pinsSecondTrie;
         assertEquals(expectedScore, endScore);
     }
 }
