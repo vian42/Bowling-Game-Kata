@@ -26,14 +26,6 @@ public class BowlingGameTest {
     }
 
     @Test
-    public void score_after_a_gutter_is_the_same() {
-        Integer initScore = game.getScore();
-        game.roll(0);
-        Integer endScore = game.getScore();
-        assertEquals(initScore, endScore);
-    }
-
-    @Test
     public void score_evolves_with_no_bonus() {
         Integer pins = 5;
         Integer initScore = game.getScore();
