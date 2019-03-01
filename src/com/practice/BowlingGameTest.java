@@ -19,4 +19,9 @@ public class BowlingGameTest {
         assertNotNull("BowlingGame ne peut être null", game);
     }
 
+    @Test
+    public void initial_score_is_0() {
+        Integer score = game.getScore();
+        assertEquals(Integer.valueOf(0), score);
+    }
 }
