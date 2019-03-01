@@ -7,4 +7,8 @@ class BowlingGame {
     Integer getScore() {
         return score;
     }
+
+    void roll(Integer pins) {
+        score += pins;
+    }
 }

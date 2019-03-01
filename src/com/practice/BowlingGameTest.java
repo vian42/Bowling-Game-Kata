@@ -26,9 +26,10 @@ public class BowlingGameTest {
     }
 
     @Test
-    public void name() {
+    public void score_after_a_gutter_is_the_same() {
+        Integer initScore = game.getScore();
         game.roll(0);
-        Integer score = game.getScore();
-        assertEquals(Integer.valueOf(0), score);
+        Integer endScore = game.getScore();
+        assertEquals(initScore, endScore);
     }
 }
