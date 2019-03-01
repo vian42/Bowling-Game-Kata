@@ -32,4 +32,14 @@ public class BowlingGameTest {
         Integer endScore = game.getScore();
         assertEquals(initScore, endScore);
     }
+
+    @Test
+    public void score_evolves_with_no_bonus() {
+        Integer pins = 5;
+        Integer initScore = game.getScore();
+        game.roll(pins);
+        Integer endScore = game.getScore();
+        Integer expectedScore = initScore + pins;
+        assertEquals(expectedScore, endScore);
+    }
 }
